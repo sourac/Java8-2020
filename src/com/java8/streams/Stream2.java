@@ -43,6 +43,14 @@ public class Stream2 {
 		boolean anyStartWithA=stringCollection.stream().anyMatch((s)->s.startsWith("a"));
 		System.out.println(anyStartWithA);
 		System.out.println("---------------------------------------------------------------------");
+		
+		boolean allStartsWithA=stringCollection.stream().allMatch((s)->s.startsWith("a"));
+		System.out.println(allStartsWithA);
+		System.out.println("---------------------------------------------------------------------");
+		
+		boolean noneStartsWithZ=stringCollection.stream().noneMatch((s)->s.startsWith("z"));
+		System.out.println(noneStartsWithZ);
+		System.out.println("---------------------------------------------------------------------");
 
 	}
 
