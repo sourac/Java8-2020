@@ -24,8 +24,13 @@ public class Stream2 {
 		stringCollection.add("bbb2");
 		stringCollection.add("ddd1");
 
-		//filtering based on certain criteria
+		// filtering based on certain criteria
 		stringCollection.stream().filter((s) -> s.startsWith("a")).forEach(System.out::println);
+
+		System.out.println("---------------------------------------------------------------------");
+		
+		//sorting
+		stringCollection.stream().sorted().filter((s) -> s.startsWith("a")).forEach(System.out::println);
 
 	}
 
