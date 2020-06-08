@@ -1,6 +1,7 @@
 package com.java8.streams;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -21,18 +22,22 @@ public class Stream1 {
 		System.out.println();
 		System.out.println("--------------------------------------------");
 
-		//list stream
+		// list stream
 		List<Integer> list = new ArrayList<Integer>();
 		for (int i = 1; i < 10; i++) {
 			list.add(i);
 		}
-		
-		Stream<Integer> stream2=list.stream();
-		stream2.forEach(p->System.out.print(p));
+
+		//stream generate
+		Stream<Integer> stream2 = list.stream();
+		stream2.forEach(p -> System.out.print(p));
 		System.out.println();
 		System.out.println("--------------------------------------------");
-		
-		
+
+		Stream<Date> stream3 = Stream.generate(() -> {
+			return new Date();
+		});
+		stream3.forEach(p->System.out.println(p));
 
 	}
 
