@@ -28,9 +28,15 @@ public class Stream2 {
 		stringCollection.stream().filter((s) -> s.startsWith("a")).forEach(System.out::println);
 
 		System.out.println("---------------------------------------------------------------------");
-		
-		//sorting
+
+		// sorting
 		stringCollection.stream().sorted().filter((s) -> s.startsWith("a")).forEach(System.out::println);
+		System.out.println("---------------------------------------------------------------------");
+
+		// mapping
+		stringCollection.stream().map(String::toUpperCase).sorted((a, b) -> b.compareTo(a))
+				.forEach(System.out::println);
+		System.out.println("---------------------------------------------------------------------");
 
 	}
 
