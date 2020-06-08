@@ -37,6 +37,12 @@ public class Stream2 {
 		stringCollection.stream().map(String::toUpperCase).sorted((a, b) -> b.compareTo(a))
 				.forEach(System.out::println);
 		System.out.println("---------------------------------------------------------------------");
+		
+		
+		//matching o/p: true
+		boolean anyStartWithA=stringCollection.stream().anyMatch((s)->s.startsWith("a"));
+		System.out.println(anyStartWithA);
+		System.out.println("---------------------------------------------------------------------");
 
 	}
 
