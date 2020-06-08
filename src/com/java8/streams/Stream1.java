@@ -34,16 +34,20 @@ public class Stream1 {
 		stream2.forEach(p -> System.out.print(p));
 		System.out.println();
 		System.out.println("--------------------------------------------");
-		Stream<Date> stream3 = Stream.generate(() -> {
-			return new Date();
-		});
-		stream3.forEach(p->System.out.println(p));
-		System.out.println();
-		System.out.println("--------------------------------------------");
 		
+//		Stream<Date> stream3 = Stream.generate(() -> {
+//			return new Date();
+//		});
+//		stream3.forEach(p->System.out.println(p));
+//		System.out.println();
+//		System.out.println("--------------------------------------------");
+//		
 		
+		//instream
 		IntStream stream4 = "12345_abcdefg".chars();
 		stream4.forEach(p->System.out.println(p));
+		System.out.println();
+		System.out.println("--------------------------------------------");
 		
 
 	}
