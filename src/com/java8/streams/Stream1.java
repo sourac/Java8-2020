@@ -3,6 +3,7 @@ package com.java8.streams;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Stream1 {
@@ -33,11 +34,17 @@ public class Stream1 {
 		stream2.forEach(p -> System.out.print(p));
 		System.out.println();
 		System.out.println("--------------------------------------------");
-
 		Stream<Date> stream3 = Stream.generate(() -> {
 			return new Date();
 		});
 		stream3.forEach(p->System.out.println(p));
+		System.out.println();
+		System.out.println("--------------------------------------------");
+		
+		
+		IntStream stream4 = "12345_abcdefg".chars();
+		stream4.forEach(p->System.out.println(p));
+		
 
 	}
 
