@@ -37,19 +37,23 @@ public class Stream2 {
 		stringCollection.stream().map(String::toUpperCase).sorted((a, b) -> b.compareTo(a))
 				.forEach(System.out::println);
 		System.out.println("---------------------------------------------------------------------");
-		
-		
-		//matching o/p: true
-		boolean anyStartWithA=stringCollection.stream().anyMatch((s)->s.startsWith("a"));
+
+		// matching o/p: true
+		boolean anyStartWithA = stringCollection.stream().anyMatch((s) -> s.startsWith("a"));
 		System.out.println(anyStartWithA);
 		System.out.println("---------------------------------------------------------------------");
-		
-		boolean allStartsWithA=stringCollection.stream().allMatch((s)->s.startsWith("a"));
+
+		boolean allStartsWithA = stringCollection.stream().allMatch((s) -> s.startsWith("a"));
 		System.out.println(allStartsWithA);
 		System.out.println("---------------------------------------------------------------------");
-		
-		boolean noneStartsWithZ=stringCollection.stream().noneMatch((s)->s.startsWith("z"));
+
+		boolean noneStartsWithZ = stringCollection.stream().noneMatch((s) -> s.startsWith("z"));
 		System.out.println(noneStartsWithZ);
+		System.out.println("---------------------------------------------------------------------");
+
+		//count
+		long startsWithB = stringCollection.stream().filter((s) -> s.startsWith("b")).count();
+		System.out.println(startsWithB);
 		System.out.println("---------------------------------------------------------------------");
 
 	}
