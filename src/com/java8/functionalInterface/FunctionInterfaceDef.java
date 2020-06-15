@@ -30,7 +30,7 @@ public interface FunctionInterfaceDef {
 	 * implemented/overriden the public method of the java.lang.object ?
 	 *
 	 * Well the answer to this is, that will still hold valid because, any
-	 * implementation of the interface will have implemenatation from the
+	 * implementation of the interface will have implementation from the
 	 * java.lang.object or elsewhere.
 	 * 
 	 * 
