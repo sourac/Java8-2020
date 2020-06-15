@@ -17,15 +17,23 @@ public class OptionalExample {
 	 */
 	public static void main(String[] args) {
 
-		String [] str=new String[10];
+		String[] str = new String[10];
 		// when the value is not present
 		Optional<String> opt = Optional.ofNullable(str[1]);
-		if(opt.isPresent()) {
+		if (opt.isPresent()) {
 			System.out.println("value is present...");
+		} else {
+			System.out.println("value is not present...");
+		}
+
+		String[] str1 = new String[10];
+		str1[1] = "Hello world";
+		Optional<String> opt1 = Optional.ofNullable(str1[1]);
+		if(opt1.isPresent()) {
+			System.out.println("value present...");
 		}else {
 			System.out.println("value is not present...");
 		}
-		
 
 	}
 
