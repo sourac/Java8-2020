@@ -18,6 +18,7 @@ public class OptionalExample {
 	public static void main(String[] args) {
 
 		String [] str=new String[10];
+		// when the value is not present
 		Optional<String> opt = Optional.ofNullable(str[1]);
 		if(opt.isPresent()) {
 			System.out.println("value is present...");
