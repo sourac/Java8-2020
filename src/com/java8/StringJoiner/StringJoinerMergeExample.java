@@ -27,6 +27,9 @@ public class StringJoinerMergeExample {
 		System.out.println(stringJoiner1);
 		
 		//Now merging these two stringJoiners
+		System.out.println("Merging the two StringJoiner");
+		StringJoiner stringFinalJoiner=stringJoiner.merge(stringJoiner1);
+		System.out.println(stringFinalJoiner);
 		
 	}
 
